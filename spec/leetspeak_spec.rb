@@ -1,6 +1,6 @@
 require('rspec')
 require('pry')
-require('leetspeak')
+require('leet_speak')
 
 describe('String#leetspeak') do
     it('replaces every "e" in a string with a "3"') do

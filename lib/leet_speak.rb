@@ -1,8 +1,8 @@
 class String
    define_method(:leetspeak) do
-     input = self.split()
+     sentence = self.split("")
 
-     input.each do |char|
+     sentence.each do |char|
 
      	if char.eql?("e") 
      		self.gsub "e", '3'
@@ -20,14 +20,19 @@ class String
      	end
      end
 
-     if input[0].eql?("s")
-     		sliced = self.slice![0]
+     if sentence[0].eql?("s")
+     		sliced = self.slice!(0)
      		new_self = self.gsub "s","z"
      		joined_self = sliced.concat(new_self)
      		return joined_self
      	end
+
+     	sentence.join("")
     end
  end
+
+puts "Sahvythfedfoi".leetspeak()
+puts "Bryan is handsome".leetspeak()
 
  # Leetspeak
 
